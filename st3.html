@@ -1,0 +1,58 @@
+<html>
+<head>
+<style>
+*{
+    padding:0px;
+    margin:0px;
+}
+body{
+            background:#dcdcdc;
+            display:flex;
+            justify-content:center;
+}
+#main{
+             margin-top:150px;
+             
+             padding:20px;
+}
+button{
+             font-size: 24px;
+              background-color: #ffb347;
+               padding:15px;
+               margin:8px 50px;
+}
+</style>
+<script>
+         function myFun(){
+              var a = document.getElementById("User_Name").value;
+               if(a.length<=3){
+                       document.getElementById("Message").innerHTML=" (name should be of minimum 3 length)";
+                         return false;
+               }
+              else
+               {
+                     document.getElementById("Message").innerHTML=" (correct input)";   
+                        return false;
+         }
+      var b = document.getElementById("mobile").value;
+              if(b.length>=10){
+                    document.getElementById("Message1").innerHTML=" (Number should be of 10 length)";
+                       return false;
+            }
+
+          
+}
+
+</script>
+</head>
+<body>
+<form name="myForm" onsubmit="return myFun()">
+<div id="main">
+<tr><td> Name..... : </td> <td><input type="text" id="User_Name" value=" "><span id="Message"></span></td><br><br>
+<tr><td>Mob.No. : </td><td><input type="text" id="mobile"value=" "><span id="Message1"></span></td><br><br>
+<tr><td>Email ID : </td><td><input type="text" name="Email" value=" "><span id="Message2"></span></td><br><br>
+<button>SUBMIT</button>
+</div>
+</form>
+</body>
+</html>
